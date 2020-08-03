@@ -12,6 +12,7 @@ desc 'outputs hola to the terminal'
 end
 
 namespace :db do 
+  
   desc 'migrate changes to your database'
   task :environment do 
     require_relative './config/environment'
@@ -19,4 +20,9 @@ namespace :db do
   task :migrate => :environment do 
     Student.create_table
   end 
+  
+  desc 'seed the database with some dummy data'
+  task :seed do 
+    
+  end
 end
